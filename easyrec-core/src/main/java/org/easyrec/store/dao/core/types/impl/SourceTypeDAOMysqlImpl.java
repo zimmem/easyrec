@@ -326,7 +326,7 @@ public class SourceTypeDAOMysqlImpl extends AbstractTableCreatingDAOImpl impleme
         try {
             id = getIdOfType(tenantId, sourceType);
         } catch (IllegalArgumentException e) {
-            logger.warn("An error occurred!", e);
+            logger.debug("An error occurred!", e);
             return false;
         }
         return (id != null);
